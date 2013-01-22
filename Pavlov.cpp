@@ -18,5 +18,5 @@ int Pavlov::getAction(Game *game, PlayHist *history, int player)
 
 QString Pavlov::getName()
 {
-    return "Pavlov";
+    return "PV";
 }

@@ -11,5 +11,5 @@ int RandomStrategy::getAction(Game *game, PlayHist *history, int player)
 
 QString RandomStrategy::getName()
 {
-    return "Random Strategy";
+    return "RAND";
 }

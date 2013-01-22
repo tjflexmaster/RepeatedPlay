@@ -11,5 +11,5 @@ int AlwaysCooperate::getAction(Game *game, PlayHist *history, int player)
 
 QString AlwaysCooperate::getName()
 {
-    return "Always Cooperate";
+    return "NC";
 }

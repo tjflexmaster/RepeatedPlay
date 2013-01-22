@@ -10,6 +10,7 @@ Arena::Arena(Game *game, StrategyInterface *strat1, StrategyInterface *strat2)
 
 void Arena::run(int repetitions)
 {
+    _total_repetitions = repetitions;
     int i = 0;
     while ( i < repetitions ) {
         int p1_action = _strat1->getAction(_game, &play_hist, 1);
@@ -18,6 +19,7 @@ void Arena::run(int repetitions)
         //Add this action to the history
         play_hist.addAction(p1_action, p2_action);
 
+//        qDebug() << "P1A: " << p1_action << " P2A: " << p2_action;
         //Add up the players score
         player1_score.append(_game->getPayoff(p1_action, p2_action, 1));
         player2_score.append(_game->getPayoff(p1_action, p2_action, 2));
@@ -51,6 +53,7 @@ void Arena::run(qreal continue_weight)
 //    qDebug() << "Norm Sum: " << (player1_sum / i) << " denom:" << i;
     player1_score.append( qreal(player1_sum / i) );
     player2_score.append( qreal(player2_sum / i) );
+    _total_repetitions = i;
 }
 
 qreal Arena::getScore(int player)
@@ -67,4 +70,9 @@ qreal Arena::getScore(int player)
         }
     }
     return sum;
+}
+
+int Arena::getRepetitions()
+{
+    return _total_repetitions;
 }

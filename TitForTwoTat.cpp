@@ -19,5 +19,5 @@ int TitForTwoTat::getAction(Game *game, PlayHist *history, int player)
 
 QString TitForTwoTat::getName()
 {
-    return "Tit for Two Tat";
+    return "Tf2T";
 }

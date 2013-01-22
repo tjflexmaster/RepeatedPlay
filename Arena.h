@@ -13,6 +13,7 @@ public:
     void run(int repetitions);
     void run( qreal continue_weight);
     qreal getScore(int player);
+    int getRepetitions();
 
 private:
     QList<qreal> player1_score;
@@ -23,6 +24,8 @@ private:
 
     PlayHist play_hist;
     Game *_game;
+
+    int _total_repetitions;
 
     static int repetitions;
     static qreal continue_weight;

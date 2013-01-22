@@ -21,5 +21,5 @@ int NeverForgive::getAction(Game *game, PlayHist *history, int player)
 
 QString NeverForgive::getName()
 {
-    return "Never Forgive";
+    return "NF";
 }

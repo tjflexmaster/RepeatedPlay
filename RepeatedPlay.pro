@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     Pavlov.cpp \
     WSLS.cpp \
     NeverForgiveUnprovoked.cpp \
-    BarGraphWidget.cpp
+    BarGraphWidget.cpp \
+    Cheater.cpp
 
 HEADERS  += RepeatedPlay.h \
     StrategyInterface.h \
@@ -43,6 +44,7 @@ HEADERS  += RepeatedPlay.h \
     Pavlov.h \
     WSLS.h \
     NeverForgiveUnprovoked.h \
-    BarGraphWidget.h
+    BarGraphWidget.h \
+    Cheater.h
 
 FORMS    += repeatedplay.ui

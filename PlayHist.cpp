@@ -18,6 +18,25 @@ QList<int>* PlayHist::getAllHist(int player)
     }
 }
 
+int PlayHist::getFirstAction(int player)
+{
+    Q_ASSERT(player > 0 && player < 3);
+
+    if ( player == 1 ) {
+        if ( player1_hist->isEmpty() ) {
+            return -1;
+        } else {
+            return player1_hist->first();
+        }
+    } else {
+        if ( player2_hist->isEmpty() ) {
+            return -1;
+        } else {
+            return player2_hist->first();
+        }
+    }
+}
+
 int PlayHist::getLastAction(int player)
 {
     Q_ASSERT(player > 0 && player < 3);
@@ -59,6 +78,7 @@ void PlayHist::addAction(int player1_action, int player2_action)
 {
     player1_hist->append(player1_action);
     player2_hist->append(player2_action);
+
 }
 
 int PlayHist::totalActions()

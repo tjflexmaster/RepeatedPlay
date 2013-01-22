@@ -12,5 +12,5 @@ int AlwaysDefect::getAction(Game *game, PlayHist *history, int player)
 
 QString AlwaysDefect::getName()
 {
-    return "Always Defect";
+    return "AD";
 }

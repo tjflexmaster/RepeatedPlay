@@ -20,5 +20,5 @@ int WSLS::getAction(Game *game, PlayHist *history, int player)
 
 QString WSLS::getName()
 {
-    return "Win Stay Lose Shift";
+    return "WSLS";
 }

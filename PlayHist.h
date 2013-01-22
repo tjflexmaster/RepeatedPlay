@@ -11,6 +11,7 @@ public:
     QList<int>* getAllHist(int player);
     int getLastAction(int player);
     int getSecondToLastAction(int player);
+    int getFirstAction(int player);
     void addAction(int player1_action, int player2_action);
     int totalActions();
 
